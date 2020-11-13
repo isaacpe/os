@@ -1,0 +1,20 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: my-ubuntu
+  labels:
+    app: plain-ubuntu-app
+spec:
+  containers:
+   - name: plain-ubuntu-pod
+     image: nginx 
+     volumeMounts:
+       - name: mypvc
+         mountPath: /usr/share/nginx/html/scale 
+     ports:
+     - containerPort: 80 
+  volumes:
+   - name: mypvc
+     persistentVolumeClaim:
+       claimName: nfs-claim1
+       readOnly: false

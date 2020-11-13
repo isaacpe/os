@@ -1,0 +1,54 @@
+apiVersion: project.openshift.io/v1
+kind: Project
+metadata:
+  annotations:
+    openshift.io/description: ""
+    openshift.io/display-name: ""
+    openshift.io/requester: developer
+    openshift.io/sa.scc.mcs: s0:c25,c0
+    openshift.io/sa.scc.supplemental-groups: 1000600000/10000
+    openshift.io/sa.scc.uid-range: 1000600000/10000
+  creationTimestamp: "2020-11-09T12:21:02Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          f:openshift.io/sa.scc.mcs: {}
+          f:openshift.io/sa.scc.supplemental-groups: {}
+          f:openshift.io/sa.scc.uid-range: {}
+    manager: cluster-policy-controller
+    operation: Update
+    time: "2020-11-09T12:21:02Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:openshift.io/description: {}
+          f:openshift.io/display-name: {}
+          f:openshift.io/requester: {}
+      f:status:
+        f:phase: {}
+    manager: openshift-apiserver
+    operation: Update
+    time: "2020-11-09T12:21:02Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:spec:
+        f:finalizers: {}
+    manager: openshift-controller-manager
+    operation: Update
+    time: "2020-11-09T12:21:02Z"
+  name: isaac-pr1
+  resourceVersion: "387537"
+  selfLink: /apis/project.openshift.io/v1/projects/isaac-pr1
+  uid: 195cf7dd-9358-4556-a1c4-d57ca3bf5f43
+spec:
+  finalizers:
+  - kubernetes
+status:
+  phase: Active
